@@ -7,7 +7,6 @@ import lombok.Setter;
 import org.springframework.data.redis.core.RedisHash;
 
 @Entity
-//@Table(name="Product_Count_table")
 @RedisHash("Stock")
 @Getter
 @Setter

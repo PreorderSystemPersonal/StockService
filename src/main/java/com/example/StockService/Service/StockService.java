@@ -50,8 +50,6 @@ public class StockService {
         // Redis에서 productId에 해당하는 현재 stock을 가져오기
         Long currentStock = redisUtil.getData(productId);
 
-        // currentstock이 음수일때 errorcode를 작성!!
-
         // stock을 1 증가시킨 값을 Redis에 다시 저장하기
         redisUtil.setData(productId, currentStock - 1);
     }
